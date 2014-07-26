@@ -75,6 +75,7 @@
      <Compile Include="Assets\Code\Player.cs" />
      <Compile Include="Assets\Code\PointStar.cs" />
      <Compile Include="Assets\Code\Porjectile.cs" />
+     <Compile Include="Assets\Code\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Code\SimpleProjectile.cs" />
      <Compile Include="Assets\Code\SortParticleSystem.cs" />
   </ItemGroup>
