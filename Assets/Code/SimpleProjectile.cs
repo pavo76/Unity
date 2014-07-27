@@ -7,6 +7,7 @@ public class SimpleProjectile: Projectile, ITakeDamage
     public GameObject DestroyedEffect;
     public int PointsToGiveToPlayer;
     public float TimeToLive;
+    public AudioClip DestroySound;
 
     public void Update()
     {
@@ -51,6 +52,8 @@ public class SimpleProjectile: Projectile, ITakeDamage
         if (DestroyedEffect != null)
             Instantiate(DestroyedEffect, transform.position, transform.rotation);
 
+        if(DestroySound!=null)
+            AudioSource.PlayClipAtPoint(DestroySound, transform.position);
         Destroy(gameObject);
     }
 }

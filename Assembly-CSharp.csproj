@@ -62,6 +62,7 @@
      <Compile Include="Assets\Code\GameHUD.cs" />
      <Compile Include="Assets\Code\GameManager.cs" />
      <Compile Include="Assets\Code\GiveDamageToPlayer.cs" />
+     <Compile Include="Assets\Code\GiveHealth.cs" />
      <Compile Include="Assets\Code\HealthBar.cs" />
      <Compile Include="Assets\Code\IFloatingTextPositioner.cs" />
      <Compile Include="Assets\Code\IPlayerRespawnListener.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\Code\PathedProjectile.cs" />
      <Compile Include="Assets\Code\PathedProjectileSpawner.cs" />
      <Compile Include="Assets\Code\Player.cs" />
+     <Compile Include="Assets\Code\PlayerBounds.cs" />
      <Compile Include="Assets\Code\PointStar.cs" />
      <Compile Include="Assets\Code\Porjectile.cs" />
      <Compile Include="Assets\Code\SimpleEnemyAI.cs" />

@@ -4,6 +4,7 @@ public class PathedProjectileSpawner : MonoBehaviour
 {
     public Transform Destination;
     public PathedProjectile Projectile;
+    public AudioClip SpawnProjectileSound;
 
     public GameObject SpawnEffect;
     public float Speed;
@@ -27,6 +28,9 @@ public class PathedProjectileSpawner : MonoBehaviour
 
         if (SpawnEffect != null)
             Instantiate(SpawnEffect, transform.position, transform.rotation);
+
+        if(SpawnProjectileSound!=null)
+            AudioSource.PlayClipAtPoint(SpawnProjectileSound, transform.position);
     }
 
     public void OnDrawGizmos()

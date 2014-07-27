@@ -17,6 +17,9 @@ public class Player : MonoBehaviour, ITakeDamage
     public float FireRate;
     public Transform ProjectileFireLocation;
     public GameObject FireProjectileEffect;
+    public AudioClip PlayerHitSound;
+    public AudioClip PlayerShootSound;
+    public AudioClip PlayerHealthSound;
     
     public int Health { get; private set; }
     public bool IsDead { get; private set; }
@@ -69,13 +72,23 @@ public class Player : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(int damage, GameObject instigator)
     {
+        AudioSource.PlayClipAtPoint(PlayerHitSound, transform.position);
         FloatingText.Show(string.Format("-{0}!", damage), "PlayerTakeDamageText",
             new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60));
         Instantiate(OuchEffect, transform.position, transform.rotation);
         Health -= damage;
 
+
         if(Health<=0)
             LevelManager.Instance.KillPlayer();
+    }
+
+    public void GiveHealth(int health, GameObject instigator)
+    {
+        AudioSource.PlayClipAtPoint(PlayerHealthSound, transform.position);
+        FloatingText.Show(string.Format("'{0}!", health), "PlayerGotHealthText",
+            new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60));
+        Health = Mathf.Min(Health + health, MaxHealth);
     }
 
 	private void HandleInput()
@@ -123,6 +136,8 @@ public class Player : MonoBehaviour, ITakeDamage
         
 
         _canFireIn = FireRate;
+
+        AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
     }
 
 	private void Flip()
