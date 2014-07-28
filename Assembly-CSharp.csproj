@@ -55,6 +55,7 @@
      <Compile Include="Assets\Code\ControllerParameters2D.cs" />
      <Compile Include="Assets\Code\ControllerPhsycsVolume2D.cs" />
      <Compile Include="Assets\Code\ControllerState2d.cs" />
+     <Compile Include="Assets\Code\FinishLevel.cs" />
      <Compile Include="Assets\Code\FloatingText.cs" />
      <Compile Include="Assets\Code\FollowObject.cs" />
      <Compile Include="Assets\Code\FollowPath.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Code\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Code\SimpleProjectile.cs" />
      <Compile Include="Assets\Code\SortParticleSystem.cs" />
+     <Compile Include="Assets\Code\StartScreen.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

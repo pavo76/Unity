@@ -47,6 +47,13 @@ public class Player : MonoBehaviour, ITakeDamage
 	        _controller.SetHorizontalForce(0);
 	}
 
+    public void FinishLevel()
+    {
+        enabled = false;
+        _controller.enabled = false;
+        collider2D.enabled = false;
+    }
+    
     public void Kill()
     {
         _controller.HandleCollisions = false;
