@@ -17,10 +17,9 @@ public class FollowPath : MonoBehaviour {
 
 	public void Start()
 	{
-		if (Path == null) {
-			Debug.LogError("Path cannot be null", gameObject);
+		if (Path == null) 
 			return;
-		}
+		
 		_currentPoint = Path.GetPathEnumerator();
 		_currentPoint.MoveNext ();
 
